@@ -4,6 +4,8 @@ Nynorsk...
 
 Aperitum i Docker med Nynorsk til Bokmål language pack.
 
+https://www.nb.no/sprakbanken/ressurskatalog/oai-nb-no-sbr-80/
+
 ---
 
 # 1.0 - Installer Docker Desktop for Windows eller MacOS
