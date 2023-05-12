@@ -2,9 +2,11 @@ FROM debian:bullseye-slim
 # ENV LANG C.UTF-8
 
 # Legg til din mappe her
-ADD /Users/frei/Documents/watchedFolder/ /Users/frei/Documents/watchedFolder/
+# ADD /Users/frei/Documents/watchedFolder/ /Users/frei/Documents/watchedFolder/
 
 RUN apt update && apt install -y curl wget
+
+# RUN mkdir -p /usr/src/watchedFolder
 
 # RUN echo "-sS https://apertium.projectjj.com/apt/install-nightly.sh | bash"
 
@@ -17,4 +19,4 @@ RUN apt search apertium
 RUN apt update && apt install apertium-dev -y
 RUN apt install apertium-nno-nob -y
 
-ENTRYPOINT ["apertium"]
+# ENTRYPOINT ["apertium"]
