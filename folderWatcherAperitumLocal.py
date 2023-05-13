@@ -1,18 +1,21 @@
-import os, time, requests, glob, random
-def deleteFiles():
-    files = glob.glob('/Users/frei/Documents/watchedFolder/*.*')
-    for f in files:
-        os.remove(f)
-
-WATCHED_FOLDER = '/Users/frei/Documents/watchedFolder/'
-EXPORTED_FOLDER = '/Users/frei/Document/watchedFolder/exported/'
-
-# Disse er irrelevante for andre enn utviklerene til dette programmet.
-dockerWatchedFolder = '/src/'
-dockerExportedFolder = '/src/exported/'
+import os, time, glob, random
 
 # Finner Brukernavnet til programmets bruker
 env_userName = os.environ['USER']
+
+# HOST COMPUTER PATHS
+WATCHED_FOLDER = f"/Users/{env_userName}/Documents/eksamensFiler/"
+EXPORTED_FOLDER = f'/Users/{env_userName}/Document/eksamensFiler/ferdigTekst/'
+
+# Sletter alle filer i mappen "eksamensFiler", men sletter ikke mappene. For å unngå masse forskjellige tekster som ligger igjen fra forrige gang.
+def deleteFiles():
+    files = glob.glob(f"/Users/{env_userName}/Documents/eksamensFiler/*.*")
+    for f in files:
+        os.remove(f)
+
+# Disse er irrelevante for andre enn utviklerene til dette programmet. Eller vågale nynorsk-motstandere!
+dockerWatchedFolder = '/src/'
+dockerExportedFolder = '/src/ferdigTekst/'
 
 def watch_folder():
     while True:
@@ -23,11 +26,11 @@ def watch_folder():
             if os.path.isfile(file_path) and (file_path.endswith('.docx')):
                 randomInteger = str(random.randint(1,5**25))
                 try:
-                    os.system(f"docker exec apertiumDockerContainer apertium -f docx nob-nno_e {dockerWatchedFolder+file_name} {dockerExportedFolder+'Nynorsk'+randomInteger+'.docx'}")
+                    os.system(f"docker exec apertiumDockerContainer apertium -f docx nob-nno {dockerWatchedFolder+file_name} {dockerExportedFolder+'Nynorsk-eksamen.docx'}")
                 except:
                     print("An error occured with writing file") # An error occured
 
-                print(f"File: {file_name} found")
+                print(f"success")
                 deleteFiles()
 
 

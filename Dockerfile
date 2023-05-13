@@ -1,14 +1,9 @@
 FROM debian:bullseye-slim
 # ENV LANG C.UTF-8
 
-# Legg til din mappe her
-# ADD /Users/frei/Documents/watchedFolder/ /Users/frei/Documents/watchedFolder/
-
 RUN apt update && apt install -y curl wget
 
-# RUN mkdir -p /usr/src/watchedFolder
-
-# RUN echo "-sS https://apertium.projectjj.com/apt/install-nightly.sh | bash"
+RUN wget -P /app https://www.nb.no/sbfil/npk-2011-2022/npk_2011_2022.tmx
 
 ADD install-nightly.sh /app/
 RUN chmod 777 /app/install-nightly.sh

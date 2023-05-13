@@ -8,21 +8,49 @@ https://www.nb.no/sprakbanken/ressurskatalog/oai-nb-no-sbr-80/
 
 ---
 
-# 1.0 - Installer Docker Desktop for Windows eller MacOS
+## Requirements
+
+-   Python versjon 3 (Python3)
+-   Docker Desktop
+-   Nynorsk motstand
+
+# Installasjon
+
+## 1 Installer Docker Desktop for Windows eller MacOS
 
 https://www.docker.com/products/docker-desktop/
+[https://docker.com/products/docker-desktop/](https://www.docker.com/products/docker-desktop/).
 
-# 2 Lag en mappe som heter 'watchedFolder' og inni der lag en mappe som heter 'exported'.
+Installer og start, Docker Dekstop applikasjonen må kjøre hele tiden dette programmet skal brukes.
 
-VELDIG VIKTIG MED STORE OG SMÅ BOKSTAVER. Kopier navnene så du er sikker på at det blir riktig.
+## 2 I /dittnavn/Documents/
 
-# 3 - Kjør følgende kommando med admin rettigheter
+### Lag en mappe som heter 'eksamensFiler' og inni der lag en mappe som heter 'ferdigTekst'.
 
-## MacOS
+VELDIG VIKTIG MED STORE OG SMÅ BOKSTAVER og _IKKE PUNKTUM_. Kopier navnene så du er sikker på at det blir riktig.
+
+#### Skal se sånn her ut
+
+├── KariNormann/
+│ ├── Documents/
+│ │ ├── eksamensFiler/
+│ │ │ ├── ferdigTekst/
+│ │ │ │
+│ │ │ │
+│ │ │ │
+│ │  
+│ ├── Movies/
+│ ├── Images/
+│ ├── Applications/
+│ ├── Music/
+
+## 3 Kjør følgende kommando med admin rettigheter
+
+### MacOS i terminal.app
 
 `sudo docker build -t apertium --no-cache .`
 
-## Windows
+### Windows - FUNKER IKKE ENDA
 
 Åpne terminal som administrator i den nedlastede mappen
 `docker build -t apertium --no-cache .`
@@ -31,8 +59,12 @@ VELDIG VIKTIG MED STORE OG SMÅ BOKSTAVER. Kopier navnene så du er sikker på a
 
 `docker run --name apertiumDockerContainer -t -v /Users/frei/Documents/watchedFolder:/src apertium`
 
-# 5 Kjør python programmet
+## 5 Kjør python programmet med Python3
 
-## Med Python3
+### Like this
 
 `python3 folderWatcherAperitumLocal.py`
+
+---
+
+### - 🐻‍❄️ Isbjørnen
