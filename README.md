@@ -30,7 +30,7 @@ Installer og start, Docker Dekstop applikasjonen må kjøre hele tiden dette pro
 VELDIG VIKTIG MED STORE OG SMÅ BOKSTAVER og _IKKE PUNKTUM_. Kopier navnene så du er sikker på at det blir riktig.
 
 #### Skal se sånn her ut
-
+`
 ├── KariNormann/
 │ ├── Documents/
 │ │ ├── eksamensFiler/
@@ -43,7 +43,7 @@ VELDIG VIKTIG MED STORE OG SMÅ BOKSTAVER og _IKKE PUNKTUM_. Kopier navnene så 
 │ ├── Images/
 │ ├── Applications/
 │ ├── Music/
-
+`
 ## 3 Kjør følgende kommando med admin rettigheter
 
 ### MacOS i terminal.app
@@ -57,7 +57,7 @@ VELDIG VIKTIG MED STORE OG SMÅ BOKSTAVER og _IKKE PUNKTUM_. Kopier navnene så 
 
 # 4 Start Docker containeren
 
-`docker run --name apertiumDockerContainer -t -v /Users/frei/Documents/watchedFolder:/src apertium`
+`docker run --name apertiumDockerContainer -t -v /Users/frei/Documents/eksamensFiler:/src apertium`
 
 ## 5 Kjør python programmet med Python3
 
