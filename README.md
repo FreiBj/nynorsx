@@ -67,4 +67,3 @@ VELDIG VIKTIG MED STORE OG SMÅ BOKSTAVER og _IKKE PUNKTUM_. Kopier navnene så 
 
 ---
 
-### - 🐻‍❄️ Isbjørnen
