@@ -5,6 +5,8 @@ Nynorsk eksamen...
 Aperitum i Docker med Nynorsk til Bokmål language pack.
 
 → https://www.nb.no/sprakbanken/ressurskatalog/oai-nb-no-sbr-80/
+→ https://www.nb.no/sprakbanken/ressurskatalog/oai-nb-no-sbr-71/
+→ https://www.nb.no/sprakbanken/en/resource-catalogue/oai-nb-no-sbr-71/
 
 **Requirements:**
 - Python versjon 3 (Python3)
