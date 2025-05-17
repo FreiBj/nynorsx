@@ -1,10 +1,11 @@
 # NynorsX
 
-Et verktøy for å oversette Nynorsk til Bokmål ved bruk av Apertium i en Docker-container. Utviklet for å hjelpe med forberedelse til Nynorsk-eksamen ved å automatisere tekstoversettelse.
+Et verktøy for å oversette **Hovedmål** til **Sidemål** ved bruk av Apertium i en Docker-container. 
+For educational purposes.
 
 ## Fra 2 til 6 i sidemål
 
-NynorsX bruker Apertiums Bokmål-til-Nynorsk språkpakke for å oversette Microsoft Word dokumenter. Applikasjonen kjører i en isolert Docker-container i bakgrunnen på pc'en, – som overvåker en spesifisert mappe for .docx filer og sender oversatte Nynorsk-filer til en bestemt mappe.
+NynorsX bruker Apertiums Bokmål-til-Nynorsk språkpakke for å oversette Microsoft Word dokumenter. Applikasjonen kjører i en isolert Docker-container i bakgrunnen på pc'en, – som overvåker en spesifisert mappe for .docx filer og sender oversatte Nynorsk-filer til en annen bestemt mappe.
 
 - Ingen GUI. Alt skjer i bakgrunnen og er omtrent umulig å ta som juks (ved mindre jeg er eksamensvakt).
 
@@ -81,7 +82,7 @@ python3 folderWatcherAperitumLocal.py
 
 1. **WORD -> Save As**
    - Plasser en Nynorsk-tekstfil (f.eks. (e.g., `eksamen.docx`) i `~/Documents/eksamensFiler/`.
-   - **Viktig:** Bruk filnavn uten mellomrom (f.eks. (e.g., `eksamen.docx`, not `my exam.docx`).
+   - **Viktig:** Bruk filnavn uten mellomrom (f.eks. (e.g., `eksamen.docx`, ikke: `my exam.docx`).
 
 2. **Vent på oversettelse:**
    - Skriptet oppdager filen og oversetter den til Bokmål.
@@ -96,7 +97,7 @@ python3 folderWatcherAperitumLocal.py
    ```
    Jeg liker å lese bøker.
    ```
-2. Vent 5–10 seconds.
+2. Vent noen sekunder.
 3. Sjekk `~/Documents/eksamensFiler/ferdigTekst/` for `test.doxc`:
    ```
    Eg likar å lese bøker.
@@ -106,17 +107,17 @@ python3 folderWatcherAperitumLocal.py
 
 ## Feilsøking
 
-| Issue | Solution |
+| Issue | Løsning |
 |-------|----------|
 | Docker not running | Start Docker Desktop og verifiser med docker info. |
 | Python script fails | Sørg for at Python3 er installert (`python3 --version`) og at skriptet er i riktig katalog. |
 | No output file | Bekreft at data-inn er i `~/Documents/eksamensFiler/` og ikke inneholder mellomrom i filnavnet. |
 | Container not starting | Sjekk container-status (`docker ps -a`) og logger (`docker logs apertiumDockerContainer`).). |
 
-For :
+Trenger du hjelp?:
 - Lag en issue på [GitHub](https://github.com/freibj/nynorsx/issues).
 - Sjekk ut [Apertium Wiki](https://wiki.apertium.org/).
-- Be for at Ivar Aasen ikke straffer deg for dine synder.
+- Be om at Ivar Aasen ikke straffer deg for dine synder.
 
 ---
 
